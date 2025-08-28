@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("assets/space.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav a {
+    padding: 20px;
+    font-size: 17px;
+    color:whitesmoke;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: rgba(245, 245, 245, 0.808);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.content .search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.774);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 45px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.content .search-bar .s1 {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 10px 45px;
+    font-size: 20px;
+    color: black;
+}
+
+.content .search-bar .s2 {
+    border: 0;
+    background: transparent;
+    outline: none;
+    color: rgba(134, 134, 134, 0.708);
+    font-size: 20px;
+}
+
+
+@media (max-aspect-ratio: 16/9) {
+    .content .search-bar .s2 {
+        border: 0;
+        background: transparent;
+        outline: none;
+        color: rgba(134, 134, 134, 0.708);
+        font-size: 15px;
+}
+
+    nav a {
+        font-size: 15px;
+    }
+}
